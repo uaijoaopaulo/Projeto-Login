@@ -1,0 +1,59 @@
+﻿body {
+}
+.font {
+    font-family: 'Roboto', sans-serif;
+}
+.shadow {
+    -webkit-box-shadow: 0px 0px 10px #999 inset;
+	   -moz-box-shadow: 0px 0px 10px #999 inset; 
+		    box-shadow: 0px 0px 10px #999 ;
+}
+.PanelCentro {
+    padding: 48px 40px 36px;
+}
+.PanelFora{
+    margin-top:65px;
+}
+.B{
+    font-size:24px;
+}
+.E {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.PanelLine{
+
+}
+.ES {
+    font-size: 14px;
+    margin-right: 68px;
+    cursor: pointer;
+}
+.BTTE {
+    margin-top: 20px;
+    margin-left: 82px;
+    cursor: pointer;
+    text-align: center;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.CorBody{
+    background: gray;
+}
+.txts{
+    margin-bottom: 10px;
+    Font-Size: 10.5pt;
+}
+.EspTex {
+    margin-right: 130px;
+    margin-top:30px;
+}
+.EspTex2{
+    margin-left:25px;
+}
+.cursor{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration:none;
+}
+

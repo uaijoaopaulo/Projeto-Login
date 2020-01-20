@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaster.master.cs" Inherits="Prova.View.PaginaMaster" %>
+
+<!DOCTYPE html>
+<script runat="server">
+    void Page_Load(object sender, EventArgs e)
+    {
+        lblAjuda.Attributes.Add("OnClick", "javascript:ChamaPaginaAjuda()");
+        lblSobre.Attributes.Add("OnClick", "javascript:ChamaPaginaSobre()");
+        lblPrivacidade.Attributes.Add("OnClick", "javascript:alert('Termos de Privacidade ainda não desenvolvidos')");
+    }    
+</script>
+<script type="text/javascript">
+    function ChamaPaginaAjuda(){
+        window.location = "AjudaView.aspx";
+    }
+    function ChamaPaginaSobre() {
+        window.location = "SobreView.aspx";
+    }
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Style/Estilo.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div align="center">
+        <form id="form1" runat="server">
+            <div>
+                <div align="center">
+                    <asp:Panel ID="Panel1" runat="server" style="height: 500px; width: 450px;" BackColor="White" HorizontalAlign="Left" BorderStyle="None" CssClass="PanelFora shadow">
+                        <asp:Panel ID="pnlPainel" runat="server" style="height: 416px; width: 370px; " BackColor="White" HorizontalAlign="Left" BorderStyle="None" CssClass="PanelCentro" >
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        </asp:Panel>
+                    </asp:Panel>
+                </div>
+            </div>
+        </form>
+        <div align="center">
+            <asp:Panel ID="Panel4" runat="server" style="height: 70px; width: 450px; " BorderStyle="None" CssClass="" Direction="LeftToRight" HorizontalAlign="Center">
+                <br />
+                <asp:Label ID="lblLinguagem" runat="server" Text="Português (Brasil)" cssclass="font EspTex" ForeColor="#212121" Font-Size="9pt"></asp:Label>
+                <asp:Label ID="lblAjuda" runat="server" Text="Ajuda" ForeColor="#757575" Font-Size="9pt" CssClass="font EspTex2 cursor"></asp:Label>
+                <asp:Label ID="lblPrivacidade" runat="server" Text="Privacidade" ForeColor="#757575" Font-Size="9pt" CssClass="font EspTex2 cursor"></asp:Label>
+                <asp:Label ID="lblSobre" runat="server" Text="Sobre" ForeColor="#757575" Font-Size="9pt" CssClass="font EspTex2 cursor"></asp:Label>
+            </asp:Panel>
+        </div>
+    </div>
+</body>
+</html>
